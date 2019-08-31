@@ -6,10 +6,20 @@
     <description>Recent content on Avraam Marimpis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 17 Aug 2019 20:05:59 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 22:56:05 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Thu, 22 Aug 2019 22:56:05 +0200</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>Below, I would like to list some of my most important and close to my heart projects, that I have spearheaded or just participated. Some of these projects are still in active development, while others are presented because I feel nostalgic about them.
+dyfunconn: Dynamic Functional Connectivity - A NeuroImaging Python Module dyfunconn is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the fc for functional connectivity and graph for the graph-related algos: graph distances and thresholding schemes.</description>
+    </item>
     
     <item>
       <title>About</title>

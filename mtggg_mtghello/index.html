@@ -16,7 +16,6 @@
 
 <meta name="generator" content="Hugo 0.59.1" />
 
-<link rel="alternate" type="application/rss&#43;xml" href="/tags/index.xml">
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
@@ -41,11 +40,72 @@
 <div class="container">
 
 
-<section id="list-pane" class="row list">
-  <ul >
-    
-  </ul>
+<header class="row text-left title">
+  <h1 class="title">mtggg &amp; mtghello</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+      
+      
+    </h6>
+  </div>
+  
 </section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<p>As part of shaperning my Python/Spark/etc. skills, I started a project for analyzing MTG cards. The whole project is separated into multiple modules. The main project is hosted in <code>mtggg</code> and some nice visualizations and results will be available on <code>mtghello</code>.</p>
+
+<p><br/></p>
+
+<h4 id="data-analysis">Data Analysis</h4>
+
+<p>The cards are given in a standard JSON format and they are fed to Apache Spark. Preprocessing is the next natural step. Duplicate cards are removed, strings and categories are encoded, MTG keywords are extracted from the text, etc.. All the analysis takes place in JupyterLab.
+The results are written both in Apache Parquet format, and they are dumped into both to MongoDB and Elasticsearch for later use.
+<hr/></p>
+
+<h4 id="search-engine-recommendation-engine">Search Engine - Recommendation Engine</h4>
+
+<p>Built upon the previous layer, a simple interface is built to query ElasticSearch. Regarding the recommendation engine; the purpose is to explore the construction of a card recommendation system using different features; for now, I am experimenting with a UMAP model.
+<hr/></p>
+
+<h4 id="rest-api">REST API</h4>
+
+<p>The idea is to use Flask to serve the machine learning models generated from the previous layers of the stack.
+<hr/></p>
+
+<h4 id="automation">Automation</h4>
+
+<p>The whole analysis is hosted in a Vagrant box for convinience; some operations, such as fetching the raw cards&rsquo; metadata is done through Airflow.
+<hr/></p>
+
+<h4 id="links">Links</h4>
+
+<ul>
+<li><a href="https://github.com/makism/mtggg">mtggg on Github</a></li>
+<li><a href="https://github.com/makism/mtghello">mtghello on Github</a></li>
+</ul>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+
+
 
 
 <section id="menu-pane" class="row menu text-center">
@@ -86,4 +146,5 @@ if (!doNotTrack) {
 <script src="js/main.js"></script>
 </body>
 </html>
+
 

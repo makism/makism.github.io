@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Avraam Marimpis</title>
@@ -30,7 +30,8 @@ Running (something like trailing) is an essential aspect of my daily life.</desc
       
       <guid>/projects/</guid>
       <description>Below, I would like to list some of my most important and close to my heart projects, that I have spearheaded or just participated. Some of these projects are still in active development, while others are presented because I feel nostalgic about them.
-dyfunconn: Dynamic Functional Connectivity - A NeuroImaging Python Module dyfunconn is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the fc for functional connectivity and graph for the graph-related algos: graph distances and thresholding schemes.</description>
+
+dyconnmap: Dynamic Functional Connectivity - A NeuroImaging Python Module dyconnmap is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the fc for functional connectivity and graph for the graph-related algos: graph distances and thresholding schemes.</description>
     </item>
     
     <item>
@@ -41,6 +42,26 @@ dyfunconn: Dynamic Functional Connectivity - A NeuroImaging Python Module dyfunc
       <guid>/about/</guid>
       <description>The last years I find myself being most productive and decisive to pursue Ph.D. studies. I am currently affiliated with the Cognitive Neuroscience Department, at the Faculty of Neuroscience of Maastricht University, and, at the same time, employed at Brain Innovation B.V. in Maastricht.
 My main research focus is brain connectivity and graph theory (and algorithms and applications). The way connectivity varies and changes across brain regions given a cognitive task, mental load, and even neurodegenerative disease.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/on_realtime_analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/on_realtime_analytics/</guid>
+      <description>https://hackernoon.com/160-data-science-interview-questions-415s3y2a</description>
+    </item>
+    
+    <item>
+      <title>mtggg &amp; mtghello</title>
+      <link>/mtggg_mtghello/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mtggg_mtghello/</guid>
+      <description>As part of shaperning my Python/Spark/etc. skills, I started a project for analyzing MTG cards. The whole project is separated into multiple modules. The main project is hosted in mtggg and some nice visualizations and results will be available on mtghello.
+
+Data Analysis The cards are given in a standard JSON format and they are fed to Apache Spark. Preprocessing is the next natural step. Duplicate cards are removed, strings and categories are encoded, MTG keywords are extracted from the text, etc.</description>
     </item>
     
   </channel>

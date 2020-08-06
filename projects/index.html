@@ -58,23 +58,25 @@
 
 <p><small><em>dyconnmap</em> is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the <code>fc</code> for functional connectivity and <code>graph</code> for the graph-related algos: graph distances and thresholding schemes. There some exciting stuff going on the <code>ts</code> sub-module also: Markov Matrices, Entropy, Wald Test, to name a few.
 I followed and employed the &ldquo;guidelines&rdquo; set from other major scientific projects (i.e., numpy, scikit-learn, etc.) regarding the API specification, the documentation, continuous integration and code coverage, and testing.</small>
-<hr/>
 <div style="float: right;"><small>#python #graph #networks #NeuroImaging #fMRI</small></div>
 <small><a href="https://github.com/makism/dyconnmap">https://github.com/makism/dyconnmap</a></small></p>
 
-<p><br /></p>
+<p><br />
+<hr/></p>
 
-<h4 id="parallel-processing-pipeline">Parallel processing pipeline</h4>
+<h4 id="internal-codename-mothership">internal codename &ldquo;Mothership&rdquo;</h4>
 
-<p><small>My proposal focuses on separating the client (as in a network client) from the rest of the (internal) components. A quick overview of the pipeline is as follows. A client application can submit several tasks (with the order of the execution being a possible feature) in a JSON format to a simple RESTful application developed in Flask. The uploaded file is then parsed and converted into a DAG and submitted to Airflow. Apache Airflow is configured to run in a cluster-mode, using Celery and RabbitMQ; distributing and executing the jobs across the cluster&rsquo;s nodes.</p>
+<p><small>My proposal focuses on separating the client (as in a network client) from the rest of the (internal) components. A quick overview of the pipeline is as follows. A client application can submit several tasks (with the order of the execution being a possible feature) in a JSON format to a simple RESTful application developed in Flask (and Flask-RESTful). The uploaded file is then parsed and converted into a DAG and submitted to Airflow. Apache Airflow is configured to run in a cluster-mode, using Celery and RabbitMQ; distributing and executing the jobs across the cluster&rsquo;s nodes.</p>
 
-<p>There an initial, demo application and setup of this proposal.</p>
+<p>After a successful demo application and setup, the project is actively developed.</p>
 
-<p>Future developments include training a machine learning model with each job&rsquo;s settings (arguments, input files, metadata, and execution time). The model could later provide an estimation of the execution time of future jobs with similar settings. Another interesting feature would be to provide real-time information about the jobs&rsquo; state using a streaming feed (using RabbitMQ or Kafka).</small>
-<hr/>
-<div style="float: right;"><small>#python #C++ #Airflow #RabbitMQ #Flask</small></div></p>
+<p>Future developments include training a machine learning model with each job&rsquo;s settings (arguments, input files, metadata, and execution time). The model could later provide an estimation of the execution time of future jobs with similar settings. Another interesting feature would be to provide real-time information about the jobs&rsquo; state using a stream (using RabbitMQ or Kafka).
+<div class="float-right"><a href="mothership">Read more&hellip; <i class="fas fa-arrow-right"></i></a></div>
+</small>
+<div style="float: right;"><small>#python #Flask #Airflow #MongoDB #C++ #REST</small></div></p>
 
-<p><br ></p>
+<p><br >
+<hr/></p>
 
 <h4 id="mtggg-mtghello">mtggg &amp; mtghello</h4>
 
@@ -82,23 +84,23 @@ I followed and employed the &ldquo;guidelines&rdquo; set from other major scient
 <div class="float-right"><a href="mtggg_mtghello">Read more&hellip; <i class="fas fa-arrow-right"></i></a></div>
 <br/>
 </small>
-<hr/>
-<div style="float: right;"><small>#python #Spark #Metaflow #Flask #MongoDB #ES</small></div>
+<div style="float: right;"><small>#python #Spark #Metaflow #Flask #REST #MongoDB #ES</small></div>
 <small>
-<a href="https://github.com/makism/mtggg">https://github.com/makism/mtggg</a>
+<a href="https://github.com/makism/mtggg">https://github.com/makism/mtggg</a> and,<br/>
 <a href="https://github.com/makism/mtghello">https://github.com/makism/mtghello</a>
 </small></p>
 
-<p><br /></p>
+<p><br />
+<hr/></p>
 
 <h4 id="eeg-fmri-in-real-time-fp7-braintrain">EEG/fMRI in Real-Time (FP7 - BrainTrain)</h4>
 
 <p><small>Part of a small team; we developed a GUI application (in C++/Qt) to stream, visualize, and process EEG/fMRI signals simultaneously in real-time. The challenge arises because of the very high sampling rate of 5000Hz. We had to make sure that all these operations complete within a pre-defined time window. It was a unique experience that I genuinely enjoyed contributing to all the different aspects and phases of the project. I implemented algos for motion correction and filtering, developed tools for visualization, the plugin interface, network backend, performed real-world testing, etc.</small>
-<hr/>
 <div style="float: right;"><small>#C++ #Qt #EEG #fMRI #signal-processing #visualization</small></div>
 <small>&nbsp;</small></p>
 
-<p><br/></p>
+<p><br/>
+<hr/></p>
 
 <h4 id="leaf-framework-a-feature-complete-php5-mvc-framework">leaf-framework; A feature-complete PHP5 MVC framework</h4>
 
@@ -109,7 +111,6 @@ I followed and employed the &ldquo;guidelines&rdquo; set from other major scient
 </blockquote>
 
 <p></small>
-<hr/>
 <div style="float: right;"><small>#php5 #MVC #design-patterns</small></div>
 <small><a href="https://github.com/makism/leaf-framework">https://github.com/makism/leaf-framework</a></small></p>
 

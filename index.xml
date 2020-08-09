@@ -17,7 +17,9 @@
       <pubDate>Thu, 06 Aug 2020 19:26:57 +0200</pubDate>
       
       <guid>/mothership/</guid>
-      <description>&amp;ldquo;Mothership&amp;rdquo; is the temporary internal codename for the project that I lead in Brain Innovation.</description>
+      <description>&amp;ldquo;Mothership&amp;rdquo; is the temporary internal codename for the project that I lead in Brain Innovation.
+The motivation behind the project is that we want to exploit our own cluster (and in the future, cloud) infrastrure in order to execute in parallel, small jobs. These jobs are small executable units extracted from BrainVoyager and are developed for a specific domain, i.e. anatomical preprocessing, functional connectivity, etc.
+Thre are multiple layers in the project, the ones that I am in charge of to proposing, developing and maintaining are:</description>
     </item>
     
     <item>

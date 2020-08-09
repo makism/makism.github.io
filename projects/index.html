@@ -64,7 +64,7 @@ I followed and employed the &ldquo;guidelines&rdquo; set from other major scient
 <p><br />
 <hr/></p>
 
-<h4 id="internal-codename-mothership">internal codename &ldquo;Mothership&rdquo;</h4>
+<h4 id="mothership">&ldquo;Mothership&rdquo;</h4>
 
 <p><small>My proposal focuses on separating the client (as in a network client) from the rest of the (internal) components. A quick overview of the pipeline is as follows. A client application can submit several tasks (with the order of the execution being a possible feature) in a JSON format to a simple RESTful application developed in Flask (and Flask-RESTful). The uploaded file is then parsed and converted into a DAG and submitted to Airflow. Apache Airflow is configured to run in a cluster-mode, using Celery and RabbitMQ; distributing and executing the jobs across the cluster&rsquo;s nodes.</p>
 

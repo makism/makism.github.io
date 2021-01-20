@@ -41,8 +41,7 @@ Currently I am very engaged and dedicated to MOOC on Coursera, Udemy and Udacity
       
       <guid>/projects/</guid>
       <description>Below, I would like to list some of my most important and close to my heart projects, that I have spearheaded or just participated. Some of these projects are still in active development, while others are presented because I feel nostalgic about them.
-
-dyconnmap: Dynamic Functional Connectivity - A NeuroImaging Python Module dyconnmap is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the fc for functional connectivity and graph for the graph-related algos: graph distances and thresholding schemes.</description>
+dyconnmap: Dynamic Functional Connectivity - A NeuroImaging Python Module _dyconnmap_ is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the fc for functional connectivity and graph for the graph-related algos: graph distances and thresholding schemes.</description>
     </item>
     
     <item>
@@ -71,7 +70,6 @@ My main research focus is brain connectivity (functional) and graph theory (and 
       
       <guid>/mtggg_mtghello/</guid>
       <description>As part of shaperning my Python/Spark/etc. skills, I started a project for analyzing MTG cards. The whole project is separated into multiple modules. The main project is hosted in mtggg and some nice visualizations and results will be available on mtghello.
-
 Data Analysis The cards are given in a standard JSON format and they are fed to Apache Spark. Preprocessing is the next natural step. Duplicate cards are removed, strings and categories are encoded, MTG keywords are extracted from the text, etc.</description>
     </item>
     

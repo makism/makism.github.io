@@ -14,7 +14,7 @@
 
 <title>Avraam Marimpis</title>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.69.0" />
 
 
 
@@ -92,35 +92,22 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    
-
-<p>As part of shaperning my Python/Spark/etc. skills, I started a project for analyzing MTG cards. The whole project is separated into multiple modules. The main project is hosted in <code>mtggg</code> and some nice visualizations and results will be available on <code>mtghello</code>.</p>
-
-<p><br/></p>
-
+    <p>As part of shaperning my Python/Spark/etc. skills, I started a project for analyzing MTG cards. The whole project is separated into multiple modules. The main project is hosted in <code>mtggg</code> and some nice visualizations and results will be available on <code>mtghello</code>.</p>
+<!-- raw HTML omitted -->
 <h4 id="data-analysis">Data Analysis</h4>
-
 <p>The cards are given in a standard JSON format and they are fed to Apache Spark. Preprocessing is the next natural step. Duplicate cards are removed, strings and categories are encoded, MTG keywords are extracted from the text, etc.. All the analysis takes place in JupyterLab.
-The results are written both in Apache Parquet format, and they are dumped into both to MongoDB and Elasticsearch for later use.
-<hr/></p>
-
-<h4 id="search-engine-recommendation-engine">Search Engine - Recommendation Engine</h4>
-
-<p>Built upon the previous layer, a simple interface is built to query ElasticSearch. Regarding the recommendation engine; the purpose is to explore the construction of a card recommendation system using different features; for now, I am experimenting with a UMAP model.
-<hr/></p>
-
+The results are written both in Apache Parquet format, and they are dumped into both to MongoDB and Elasticsearch for later use.</p>
+<!-- raw HTML omitted -->
+<h4 id="search-engine---recommendation-engine">Search Engine - Recommendation Engine</h4>
+<p>Built upon the previous layer, a simple interface is built to query ElasticSearch. Regarding the recommendation engine; the purpose is to explore the construction of a card recommendation system using different features; for now, I am experimenting with a UMAP model.</p>
+<!-- raw HTML omitted -->
 <h4 id="rest-api">REST API</h4>
-
-<p>The idea is to use Flask to serve the machine learning models generated from the previous layers of the stack.
-<hr/></p>
-
+<p>The idea is to use Flask to serve the machine learning models generated from the previous layers of the stack.</p>
+<!-- raw HTML omitted -->
 <h4 id="automation">Automation</h4>
-
-<p>The whole analysis is hosted in a Vagrant box for convinience; some operations, such as fetching the raw cards&rsquo; metadata is done through Airflow.
-<hr/></p>
-
+<p>The whole analysis is hosted in a Vagrant box for convinience; some operations, such as fetching the raw cards&rsquo; metadata is done through Airflow.</p>
+<!-- raw HTML omitted -->
 <h4 id="links">Links</h4>
-
 <ul>
 <li><a href="https://github.com/makism/mtggg">mtggg on Github</a></li>
 <li><a href="https://github.com/makism/mtghello">mtghello on Github</a></li>
@@ -155,7 +142,7 @@ The results are written both in Apache Parquet format, and they are dumped into 
 <footer class="row text-center footer">
   <hr />
   
-  <h6 class="text-center copyright">© 2020. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  <h6 class="text-center copyright">© 2021. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
   
   
 </footer>

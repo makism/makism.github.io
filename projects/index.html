@@ -14,7 +14,7 @@
 
 <title>Avraam Marimpis</title>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.69.0" />
 
 
 
@@ -85,73 +85,37 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    
-
-<p>Below, I would like to list some of my most important and close to my heart projects, that I have spearheaded or just participated. Some of these projects are still in active development, while others are presented because I feel nostalgic about them.</p>
-
-<p><br/></p>
-
-<h4 id="dyconnmap-dynamic-functional-connectivity-a-neuroimaging-python-module">dyconnmap: Dynamic Functional Connectivity - A NeuroImaging Python Module</h4>
-
-<p><small><em>dyconnmap</em> is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the <code>fc</code> for functional connectivity and <code>graph</code> for the graph-related algos: graph distances and thresholding schemes. There some exciting stuff going on the <code>ts</code> sub-module also: Markov Matrices, Entropy, Wald Test, to name a few.
-I followed and employed the &ldquo;guidelines&rdquo; set from other major scientific projects (i.e., numpy, scikit-learn, etc.) regarding the API specification, the documentation, continuous integration and code coverage, and testing.</small>
-<div style="float: right;"><small>#python #graph #networks #NeuroImaging #fMRI</small></div>
-<small><a href="https://github.com/makism/dyconnmap">https://github.com/makism/dyconnmap</a></small></p>
-
-<p><br />
-<hr/></p>
-
+    <p>Below, I would like to list some of my most important and close to my heart projects, that I have spearheaded or just participated. Some of these projects are still in active development, while others are presented because I feel nostalgic about them.</p>
+<!-- raw HTML omitted -->
+<h4 id="dyconnmap-dynamic-functional-connectivity---a-neuroimaging-python-module">dyconnmap: Dynamic Functional Connectivity - A NeuroImaging Python Module</h4>
+<p><!-- raw HTML omitted -->_dyconnmap_ is a Python module for your EEG/fMRI/and MEG-i-guess connectivity and graph analysis needs. It is organized into a few sub-modules; the most obvious ones are the <code>fc</code> for functional connectivity and <code>graph</code> for the graph-related algos: graph distances and thresholding schemes. There some exciting stuff going on the <code>ts</code> sub-module also: Markov Matrices, Entropy, Wald Test, to name a few.
+I followed and employed the &ldquo;guidelines&rdquo; set from other major scientific projects (i.e., numpy, scikit-learn, etc.) regarding the API specification, the documentation, continuous integration and code coverage, and testing.<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h4 id="mothership">&ldquo;Mothership&rdquo;</h4>
-
-<p><small>My proposal focuses on separating the client (as in a network client) from the rest of the (internal) components. A quick overview of the pipeline is as follows. A client application can submit several tasks (with the order of the execution being a possible feature) in a JSON format to a simple RESTful application developed in Flask (and Flask-RESTful). The uploaded file is then parsed and converted into a DAG and submitted to Airflow. Apache Airflow is configured to run in a cluster-mode, using Celery and RabbitMQ; distributing and executing the jobs across the cluster&rsquo;s nodes.</p>
-
+<p><!-- raw HTML omitted -->My proposal focuses on separating the client (as in a network client) from the rest of the (internal) components. A quick overview of the pipeline is as follows. A client application can submit several tasks (with the order of the execution being a possible feature) in a JSON format to a simple RESTful application developed in Flask (and Flask-RESTful). The uploaded file is then parsed and converted into a DAG and submitted to Airflow. Apache Airflow is configured to run in a cluster-mode, using Celery and RabbitMQ; distributing and executing the jobs across the cluster&rsquo;s nodes.</p>
 <p>After a successful demo application and setup, the project is actively developed.</p>
-
-<p>Future developments include training a machine learning model with each job&rsquo;s settings (arguments, input files, metadata, and execution time). The model could later provide an estimation of the execution time of future jobs with similar settings. Another interesting feature would be to provide real-time information about the jobs&rsquo; state using a stream (using RabbitMQ or Kafka).
-<div class="float-right"><a href="mothership">Read more&hellip; <i class="fas fa-arrow-right"></i></a></div>
-</small>
-<div style="float: right;"><small>#python #Flask #Airflow #MongoDB #C++ #REST</small></div></p>
-
-<p><br >
-<hr/></p>
-
-<h4 id="mtggg-mtghello">mtggg &amp; mtghello</h4>
-
-<p><small>As part of shaperning my Python/Spark/etc. skills, I am engaged to a data analysis, engineering and machine learning project for analyzing MTG cards.
-<div class="float-right"><a href="mtggg_mtghello">Read more&hellip; <i class="fas fa-arrow-right"></i></a></div>
-<br/>
-</small>
-<div style="float: right;"><small>#python #Spark #Metaflow #Flask #REST #MongoDB #ES</small></div>
-<small>
-<a href="https://github.com/makism/mtggg">https://github.com/makism/mtggg</a> and,<br/>
-<a href="https://github.com/makism/mtghello">https://github.com/makism/mtghello</a>
-</small></p>
-
-<p><br />
-<hr/></p>
-
-<h4 id="eeg-fmri-in-real-time-fp7-braintrain">EEG/fMRI in Real-Time (FP7 - BrainTrain)</h4>
-
-<p><small>Part of a small team; we developed a GUI application (in C++/Qt) to stream, visualize, and process EEG/fMRI signals simultaneously in real-time. The challenge arises because of the very high sampling rate of 5000Hz. We had to make sure that all these operations complete within a pre-defined time window. It was a unique experience that I genuinely enjoyed contributing to all the different aspects and phases of the project. I implemented algos for motion correction and filtering, developed tools for visualization, the plugin interface, network backend, performed real-world testing, etc.</small>
-<div style="float: right;"><small>#C++ #Qt #EEG #fMRI #signal-processing #visualization</small></div>
-<small>&nbsp;</small></p>
-
-<p><br/>
-<hr/></p>
-
+<p>Future developments include training a machine learning model with each job&rsquo;s settings (arguments, input files, metadata, and execution time). The model could later provide an estimation of the execution time of future jobs with similar settings. Another interesting feature would be to provide real-time information about the jobs&rsquo; state using a stream (using RabbitMQ or Kafka).</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<h4 id="mtggg--mtghello">mtggg &amp; mtghello</h4>
+<p><!-- raw HTML omitted -->As part of shaperning my Python/Spark/etc. skills, I am engaged to a data analysis, engineering and machine learning project for analyzing MTG cards.</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<h4 id="eegfmri-in-real-time-fp7---braintrain">EEG/fMRI in Real-Time (FP7 - BrainTrain)</h4>
+<p><!-- raw HTML omitted -->Part of a small team; we developed a GUI application (in C++/Qt) to stream, visualize, and process EEG/fMRI signals simultaneously in real-time. The challenge arises because of the very high sampling rate of 5000Hz. We had to make sure that all these operations complete within a pre-defined time window. It was a unique experience that I genuinely enjoyed contributing to all the different aspects and phases of the project. I implemented algos for motion correction and filtering, developed tools for visualization, the plugin interface, network backend, performed real-world testing, etc.<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h4 id="leaf-framework-a-feature-complete-php5-mvc-framework">leaf-framework; A feature-complete PHP5 MVC framework</h4>
-
-<p><small>I jumped onto the-then hype train of MVC frameworks from the very beginning. I was fascinated by the elegance that these frameworks brought into the messy world of scripts; and the sophisticated design patterns. Decided to educate me on the topic, first and foremost by reading the &ldquo;Design Patterns: Elements of Reusable Object-Oriented Software&rdquo; by the &ldquo;Gang of Four&rdquo; and hacking around and tearing down the code of other frameworks. The final result was <em>leaf framework</em>. It contained all the usual features one would expect to find to an MVC framework: URL routing, scaffolding, a simple ORM, hooks, plugins, multiple locales, etc. I even went the extra mile and profiled the code to identify the bottlenecks (spoiler: it was the various regular expression in the URL routing class). This spiraled into a new &ldquo;minimal&rdquo; version using static routes but extremely fast!</p>
-
+<p><!-- raw HTML omitted -->I jumped onto the-then hype train of MVC frameworks from the very beginning. I was fascinated by the elegance that these frameworks brought into the messy world of scripts; and the sophisticated design patterns. Decided to educate me on the topic, first and foremost by reading the &ldquo;Design Patterns: Elements of Reusable Object-Oriented Software&rdquo; by the &ldquo;Gang of Four&rdquo; and hacking around and tearing down the code of other frameworks. The final result was <em>leaf framework</em>. It contained all the usual features one would expect to find to an MVC framework: URL routing, scaffolding, a simple ORM, hooks, plugins, multiple locales, etc. I even went the extra mile and profiled the code to identify the bottlenecks (spoiler: it was the various regular expression in the URL routing class). This spiraled into a new &ldquo;minimal&rdquo; version using static routes but extremely fast!</p>
 <blockquote>
 <p>pro tip: opt-in for another framework</p>
 </blockquote>
-
-<p></small>
-<div style="float: right;"><small>#php5 #MVC #design-patterns</small></div>
-<small><a href="https://github.com/makism/leaf-framework">https://github.com/makism/leaf-framework</a></small></p>
-
-<p><br /></p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
 
   </div>
 </section>
@@ -176,7 +140,7 @@ I followed and employed the &ldquo;guidelines&rdquo; set from other major scient
 <footer class="row text-center footer">
   <hr />
   
-  <h6 class="text-center copyright">© 2020. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  <h6 class="text-center copyright">© 2021. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
   
   
 </footer>

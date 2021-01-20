@@ -14,7 +14,7 @@
 
 <title>Avraam Marimpis</title>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.69.0" />
 
 
 
@@ -85,57 +85,42 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    
-
-<p>&ldquo;Mothership&rdquo; is the temporary internal codename for the project that I lead in Brain Innovation.</p>
-
+    <p>&ldquo;Mothership&rdquo; is the temporary internal codename for the project that I lead in Brain Innovation.</p>
 <p>The motivation behind the project is that we want to exploit our own cluster (and in the future, cloud) infrastrure in order to execute in parallel, small jobs. These jobs are small executable units extracted from BrainVoyager and are developed for a specific domain, i.e. <code>anatomical preprocessing</code>, <code>functional connectivity</code>, etc.</p>
-
 <p>Thre are multiple layers in the project, the ones that I am in charge of to proposing, developing and maintaining are:</p>
-
 <ol>
 <li>REST-API</li>
 <li>A crossplatform client</li>
 <li>Infrastructure</li>
 <li>Development and Deployment</li>
 </ol>
-
 <h3 id="rest-api">REST-API</h3>
-
 <p>The API is developed in Flask and Flask-RESTful and served over Gunicorn. The development of the api comforts <a href="https://swagger.io/">OpenAPI 3.0 and Swagger</a>, with <a href="https://swagger.io/tools/swagger-ui/">Swagger-UI</a> also being available to explore and quick test the endpoints.</p>
-
 <p>Each endpoint is defined and well-documented in its own module. The requests and responses are modeled using Swagger and when working with json files, there are available schemas for validation.</p>
-
 <p>For example, this is a (truncated snippet) for a request model:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StorageModel</span>(Schema):
-    <span style="color:#e6db74">&#34;&#34;&#34;Top-level Storage Model.&#34;&#34;&#34;</span>
-    type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;object&#34;</span>
-    properties <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;storage&#34;</span>: Storage}
-    required <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;storage&#34;</span>]</code></pre></div>
-
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">StorageModel</span>(Schema):
+    <span style="color:#d14">&#34;&#34;&#34;Top-level Storage Model.&#34;&#34;&#34;</span>
+    <span style="color:#0086b3">type</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;object&#34;</span>
+    properties <span style="color:#000;font-weight:bold">=</span> {<span style="color:#d14">&#34;storage&#34;</span>: Storage}
+    required <span style="color:#000;font-weight:bold">=</span> [<span style="color:#d14">&#34;storage&#34;</span>]</code></pre></td></tr></table>
+</div>
+</div>
 <p>The project has at least two configuration setups, i.e. <code>Production</code> and <code>Testing</code>; that later of which enables specific flags to allows <code>nosetests</code> to execute. I also experimenting with <code>mock</code> tests to emulate for real-world scenarios.</p>
-
 <p>Regarding authentication and security, there is the functionality to provide per user-authentication when calling the API. In regards to User-data, there is a plan to provide each user access to their own, isolated collections in MongoDB.</p>
-
-<p><center>
-<figure><a href="mothership_swagger.png">
-    <img src="mothership_swagger.png"
-         alt="The Mothership&amp;rsquo;s API (under deverlopment)" width="75%" height="50%"/> </a><figcaption>
-            <p>The Mothership&rsquo;s API (under deverlopment)</p>
-        </figcaption>
-</figure>
-
-</center></p>
-
+<!-- raw HTML omitted -->
 <h3 id="infrastructure-and-deployment">Infrastructure and Deployment</h3>
-
 <p>The backend of the infrastracture is <a href="https://airflow.apache.org/">Apache Airflow</a> and <a href="https://www.mongodb.com/">MongoDB</a>. Airflow is used in a distributed configuration with the main node of our cluster acting as the webserver and scheduler, and the rest of our nodes are workers. In Mongo, we store the transactions of each Workflow, and its important metadata.</p>
-
 <h3 id="development-and-deployment">Development and Deployment</h3>
-
 <p>For the development part, I opted-in used <a href="https://www.vagrantup.com/">Vagrant</a> installations to keep my machines easily maintained. The code is track in a Git repository in our own private <a href="https://www.phacility.com/phabricator/">Phabricator</a> instance.</p>
-
 <p>Regarding the deployment, I built two <a href="https://www.docker.com/">Docker</a> images. One is specific for the main node, and the other one for the workers. <a href="https://www.portainer.io/">Portainer</a> is definitely helpful.</p>
 
   </div>
@@ -161,7 +146,7 @@
 <footer class="row text-center footer">
   <hr />
   
-  <h6 class="text-center copyright">© 2020. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  <h6 class="text-center copyright">© 2021. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
   
   
 </footer>

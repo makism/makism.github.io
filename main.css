@@ -1,0 +1,35 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+@font-face {
+    font-family: JuliaMono-Light;
+    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Medium.woff2");
+}
+
+body {
+    font-family: "JuliaMono-Medium", monospace;
+    background-color: #ffffff
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+a,
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: #000000;
+}
